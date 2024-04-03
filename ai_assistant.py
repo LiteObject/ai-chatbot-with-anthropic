@@ -4,7 +4,6 @@ import os
 
 dotenv.load_dotenv()
 
-
 def chat_with_assistant(user_prompt: str, system_prompt: str = None) -> str:
     # Setup API key
     api_key = os.environ.get("ANTHROPIC_API_KEY")
@@ -27,6 +26,3 @@ def chat_with_assistant(user_prompt: str, system_prompt: str = None) -> str:
 
     # Send messages and get responses:
     return response.content[0].text.strip()
-    # return response.content[0].text.replace("।", ".")
-    # return response.content[0].text.replace("।", ".").replace("।", ".")
-    # return response.content[0].text.replace("।", ".").replace("।", ".").replace("।", ".")
