@@ -11,7 +11,15 @@ def greet(name: str) -> str:
 
 user_input = gr.Textbox(label="Your Input:", placeholder="Enter your question here")
 system_output = gr.Textbox(label="System Output:")
-chatbot_ui = gr.Interface(fn=ai.chat_with_assistant, inputs=[user_input], outputs=[system_output])
+desc = gr.Markdown("### Welcome to My Chatbot (using Claude-3 Opus)")
+
+chatbot_ui = gr.Interface(
+    fn=ai.chat_with_assistant, 
+    inputs=[user_input], 
+    outputs=[system_output],
+    title="Experiment with Anthrop\c Models",
+    description=desc.value
+    )
 
 #demo = gr.Interface(fn=greet, inputs="text", outputs="text")
 
