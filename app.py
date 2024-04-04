@@ -1,6 +1,5 @@
 import ai_assistant as ai
 from colorama import Fore, Back, Style
-import gradio as gr
 
 def print_system_message(message):
     print(Fore.LIGHTRED_EX + "Chatbot: " + message + Fore.RESET + "\n")
